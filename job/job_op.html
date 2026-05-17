@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Opportunities - Coffee</title>
+<style>
+    body {
+        margin: 0;
+        font-family: "Georgia", serif;
+        background-color: #fdf6f0;
+        color: #4b3832;
+    }
+
+    /* ===== NAVIGATION BAR ===== */
+    .navbar {
+  position:fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  display:flex ;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #6a7a55cc, #8b6f53cc);
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+  padding: 12px 25px;
+  box-shadow: 0 8px 30px rgba(107, 122, 85, 0.5);
+  z-index: 100;
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* Navbar style when scrolled */
+.navbar.scrolled {
+  background: linear-gradient(135deg, #8b6f53cc, #6a7a55cc);
+  box-shadow: 0 12px 50px rgba(139, 111, 83, 0.8);
+}
+
+.navbar:hover {
+  box-shadow: 0 12px 50px rgba(107, 122, 85, 0.7);
+}
+
+/* Logo */
+.logo {
+  height: 65px;
+}
+
+/* Nav Links - Centered */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white; /* Dark muted brown */
+  font-weight: 500;
+  background:  #4d4427; /* Beige */
+  padding: 8px 18px;
+  border-radius: 25px; /* Oval buttons */
+  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Underline animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 2px;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Hover effect */
+.nav-links li a:hover {
+  background: rgba(179, 158, 134, 0.6);
+  color: #36432a; /* Dark green */
+  box-shadow: 0 4px 10px rgba(179, 158, 134, 0.3);
+  transform: scale(1.05);
+}
+
+/* Login Button - Right Side */
+.login-btn {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px; /* Square-ish button */
+  transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
+  background: #4d4427;
+  color: white; 
+  box-shadow: 0 0 10px #a4916daa;
+
+}
+
+.login-btn:hover {
+  background: #6c6a51; /* Dark olive green */
+  box-shadow: 0 0 20px #6c6a51dd;
+  color: #e9e4d4; /* Light beige */
+  transform: scale(1.05);
+}
+
+    /* ===== JOB SECTION ===== */
+    .job-section {
+        padding: 100px 20px 60px;
+        text-align: center;
+    }
+    .job-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        color: #3e2723;
+    }
+    .job-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
+    .job-card {
+        background: #fffaf5;
+        border-radius: 15px;
+        padding: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+    .job-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    .apply-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #a0522d;
+        color: #fff;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: background 0.3s ease;
+    }
+    .apply-btn:hover {
+        background: #7b3f24;
+    }
+    /* ===== Footer ===== */
+.site-footer{background:var(--cream);padding:30px 20px 16px;margin-top:20px;border-top:2px solid rgba(75,58,42,.2)}
+.footer-grid{
+  display:grid;gap:26px;grid-template-columns:2fr 1fr 1fr 1fr;
+  max-width:1100px;margin:0 auto;
+}
+.foot-col .big{font-size:40px;margin-bottom:6px}
+.foot-col h4{margin:0 0 6px}
+.foot-col a{display:block;color:black;text-decoration:none;margin:6px 0}
+.foot-col a:hover{text-decoration:underline}
+.foot-social{display:flex;gap:8px;margin-top:8px}
+.copy{text-align:center;margin-top:18px;font-size:14px}
+
+</style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+  <nav class="navbar">
+    <!-- Logo on the left -->
+    <img src="/photos/logo-removebg-preview.png" alt="Logo" class="logo">
+
+    <!-- Navigation in the middle -->
+    <ul class="nav-links">
+      <li><a href="/homepage/homepage.html">Home</a></li>
+      <li><a href="/menu/Menu.html">Menu</a></li>
+      <li><a href="/About Us/88.html">About</a></li>
+      <li><a href="/contact/contact.html">Contact Us</a></li>
+      <li><a href="/job/job_op.html">Jobs</a></li>
+    </ul>
+    
+    <!-- Login button on the right -->
+    <button id="authBtn" class="login-btn">Log In</button>
+  </nav>
+
+<section class="job-section">
+    <h2>Join Our Coffee Family ☕</h2>
+    <p>We're always looking for passionate, friendly, and coffee-loving individuals to join our team.</p>
+
+    <div class="job-cards">
+        <div class="job-card">
+            <h3>Barista 👩🏻‍🦰☕️</h3>
+            <p>Craft beautiful coffee drinks and create memorable customer moments.</p>
+            <a href="apply.html?position=Barista" class="apply-btn">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <h3>Cashier 💸</h3>
+            <p>Be the friendly face that welcomes every customer with a smile.</p>
+            <a href="apply.html?position=Cashier" class="apply-btn">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <h3>Baker 👩🏻‍🍳🧁</h3>
+            <p>Bake delicious pastries and desserts that pair with our brews.</p>
+            <a href="apply.html?position=Baker" class="apply-btn">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <h3>Shift Supervisor 👨‍💼</h3>
+            <p>Lead the team and keep operations running smoothly.</p>
+            <a href="apply.html?position=Shift Supervisor" class="apply-btn">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <h3>Delivery Rider 🚚</h3>
+            <p>Deliver fresh coffee and smiles right to customers’ doors.</p>
+            <a href="apply.html?position=Delivery Rider" class="apply-btn">Apply Now</a>
+        </div>
+        <div class="job-card">
+            <h3>Cleaning Staff 🧹</h3>
+            <p>Ensure a clean and cozy environment for guests.</p>
+            <a href="apply.html?position=Cleaning Staff" class="apply-btn">Apply Now</a>
+        </div>
+    </div>
+    <br>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="foot-col">
+          <p>We roast small batches, brew with love, and keep the vibes vintage.</p>
+          <div class="foot-social">
+            <a href="#" class="social-btn">f</a>
+            <a href="#" class="social-btn">⌾</a>
+            <a href="#" class="social-btn">x</a>
+          </div>
+        </div>
+
+        <div class="foot-col">
+          <h4>Navigation</h4>
+          <a href="/homepage/homepage.html">Home</a>
+          <a href="/About Us/88.html">About Us</a>
+          <a href="/menu/Menu.html">Menu</a>
+          <a href="/contact/contact.html">Contact</a><br>
+          <a href="/job/job_op.html">Jobs</a>
+        </div>
+
+        <div class="foot-col">
+          <h4>Open Hours</h4>
+          <p>7:00 AM – 7:00 PM</p>
+          <p>Mon – Sat</p>
+          <p>Closed on Public Holidays</p>
+          <p>We're always looking for passionate people to join our coffee shop family.</p>
+        </div>
+      </div>
+      <div class="copy">© 2025 The Quiet Mug. All rights reserved.</div>
+    </footer>
+</section>
+</body>
+<script>
+    const authBtn = document.getElementById("authBtn");
+
+    function updateAuthButton() {
+      const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+      if (isLoggedIn) {
+        authBtn.textContent = "Logout";
+        authBtn.onclick = () => {
+          localStorage.setItem("loggedIn", "false");
+          sessionStorage.removeItem("currentUser"); // optional: clear user data
+          location.reload();
+        };
+      } else {
+        authBtn.textContent = "Log In";
+        authBtn.onclick = () => {
+          window.location.href = "/newreglogin/loginpage.html";
+        };
+      }
+    }
+
+    updateAuthButton();
+  </script>
+</html>

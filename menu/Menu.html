@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Cafe Mug</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <!-- Logo on the left -->
+    <img src="/photos/logo-removebg-preview.png" alt="Logo" class="logo">
+    <!-- <p>The Cafe Mug</p> -->
+
+    <!-- Navigation in the middle -->
+    <ul class="nav-links">
+      <li><a href="/homepage/homepage.html">Home</a></li>
+      <li><a href="/menu/Menu.html">Menu</a></li>
+      <li><a href="/About Us/88.html">About</a></li>
+      <li><a href="/contact/contact.html">Contact Us</a></li>
+      <li><a href="/job/job_op.html">Jobs</a></li>
+    </ul>
+
+    <!-- Login button on the right -->
+    <button id="authBtn" class="login-btn">Log In</button>
+  </nav>
+
+  <!-- Hero Slider -->
+  <section class="hero">
+    <div class="slider">
+      <div class="slide active" style="background-image: url('cakebanner.jpg');"></div>
+      <div class="slide" style="background-image: url('coffrenamm.jpg');"></div>
+      <div class="slide" style="background-image: url('MacaronBanner.jpg');"></div>
+
+      <!-- Navigation arrows -->
+      <div class="prev">&#10094;</div>
+      <div class="next">&#10095;</div>
+    </div>
+  </section>
+  <!-- HERO / PROMOTION -->
+  <div class="container hero" id="promotion">
+    <div class="hero-grid">
+      <section class="promo">
+        <span class="promo-badge" aria-hidden="true"></span>
+        <h1>Buy 1 Get 1 <span style="color:var(--accent)">Latte</span> — September Only</h1>
+        <p>Warm up with our signature Cream-Choco for just MMK 12000.</p>
+        <div class="actions">
+          <a class="btn" href="#famous">See signature Menu</a>
+        </div>
+        <div class="promo-img" role="img" aria-label="Latte with art"></div>
+      </section>
+
+      <aside class="side-card" aria-label="Limited offer">
+        <div class="thumb" role="img" aria-label="Croissant and coffee"></div>
+        <div>
+          <h3>Breakfast Combo</h3>
+          <p>Any pastry + hot drink <strong>MMK 15000</strong> · <br>Daily 7–11 AM</br></p>
+          <a class="btn-add" data-id="Combo" data-name="Any pastry + hot drink" data-price="15000" data-currency="MMK">Get Deal</a>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <br><br>
+
+  <div class="menu-div">
+  <ul class="menu-link">
+    <li><a href="#famous">Signature Menu</a></li>
+    <li><a href="#drinks">Drinks</a></li>
+    <li><a href="#desserts">Desserts</a></li>
+    <li><a href="#pastries">Pastries & Baked Goods</a></li>
+    <li><a href="#cakes">Cakes</a></li>
+    <li><a href="#meals">Light Meals & Snacks</a></li>
+    <li><a href="#specials">Specials & Seasonal</a></li>
+  </ul>
+  </div>
+
+  <br><br>
+
+  <!-- FAMOUS MENU -->
+  <div class="container" id="famous">
+    <div class="section-title">
+      <h2>Signature Menu</h2>
+    </div><br>
+    <div class="grid">
+      <article class="card">
+        <div class="image fit-cover" style="background-image:url('Cream-Choco.jpg');"></div>
+        <div class="content">
+          <div class="price-row">
+            <h3 style="margin:0">Cream-Choco</h3>
+            <span class="price">MMK 12000</span>
+          </div>
+          <span class="tag">New</span>
+          <button class="btn-add" data-id="cream-choco" data-name="Cream-Choco" data-price="12000" data-currency="MMK" >Add</button>
+        </div>
+      </article>
+      <article class="card" data-cat="meal">
+        <div class="image fit-cover" style="background-image:url('AvocadoToast.jpg');"></div>
+        <div class="content">
+       <div class="price-row"><h3 style="margin:0">Avocado Toast</h3><span class="price">MMK 11000</span></div>
+       <span class="tag">Vegetarian</span>
+       <button class="btn-add" data-id="meal11" data-name="Avocado Toast" data-price="11000" data-currency="MMK">Add</button>
+       </div>
+      </article>  
+    <article class="card" data-cat="tea">
+      <div class="image fit-cover" style="background-image:url('MachaLAtte.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Matcha Latte</h3>
+          <span class="price">MMK 10000</span>
+        </div>
+        <span class="tag">New</span>
+        <button class="btn-add" data-id="tea7" data-name="Matcha Latte" data-price="10000" data-currency="MMK">Add</button>
+      </div>
+    </article>
+    <article class="card" data-cat="dessert">
+      <div class="image fit-cover" style="background-image:url('Tiramisu.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Tiramisu</h3>
+          <span class="price">MMK 12000</span>
+        </div>
+        <span class="tag">New</span>
+        <button class="btn-add" data-id="dessert1" data-name="Tiramisu" data-price="12000" data-currency="MMK">Add</button>
+      </div>
+    </article>
+
+      <article class="card" data-cat="coffee">
+      <div class="image fit-cover" style="background-image:url('espressodouble.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Espresso(Double)</h3>
+          <span class="price">MMK 7000</span>
+        </div>
+        <button class="btn-add" data-id="coffee3" data-name="Espresso (Double)" data-price="7000" data-currency="MMK">Add</button>
+      </div>
+    </article>
+
+    <article class="card" data-cat="coffee">
+      <div class="image fit-cover" style="background-image:url('cappuccino.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Cappuccino</h3>
+          <span class="price">MMK 8000</span>
+        </div>
+        <button class="btn-add" data-id="coffee4" data-name="Cappuccino" data-price="8000" data-currency="MMK">Add</button>
+      </div>
+    </article>
+
+    <article class="card" data-cat="coffee">
+      <div class="image fit-cover" style="background-image:url('icedlatte.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Iced Latte</h3>
+          <span class="price">MMK 9000</span>
+        </div>
+        <button class="btn-add" data-id="coffee11" data-name="Iced Latte" data-price="9000" data-currency="MMK">Add</button>
+      </div>
+    </article>
+    <article class="card" data-cat="special">
+      <div class="image fit-cover" style="background-image:url('FrozenCaramelFrappe.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Frozen Caramel</h3>
+          <span class="price">MMK 12500</span>
+        </div>
+        <button class="btn-add" data-id="special6" data-name="Frozen Caramel Frappe" data-price="12500" data-currency="MMK">Add</button>
+      </div>
+    </article>
+
+
+    <article class="card" data-cat="special">
+      <div class="image fit-cover" style="background-image:url('PumpkinSpiceLatteSeasonal.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Pumpkin Latte</h3>
+          <span class="price">MMK 12000</span>
+        </div>
+        <button class="btn-add" data-id="special1" data-name="Pumpkin Spice Latte" data-price="12000" data-currency="MMK">Add</button>
+      </div>
+    </article>
+
+    <!-- Pastries & Cakes -->
+    <article class="card" data-cat="pastry">
+      <div class="image fit-cover" style="background-image:url('ChocolateCroissant.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Choco-Croissant</h3>
+          <span class="price">MMK 8000</span>
+        </div>
+        <button class="btn-add" data-id="pastry3" data-name="Chocolate Croissant" data-price="8000" data-currency="MMK">Add</button>
+      </div>
+    </article>
+
+    <article class="card" data-cat="pastry">
+      <div class="image fit-cover" style="background-image:url('AlmondCroissant.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Al-Croissant</h3>
+          <span class="price">MMK 8000</span>
+        </div>
+        <button class="btn-add" data-id="pastry2" data-name="Almond Croissant" data-price="8000" data-currency="MMK">Add</button>
+      </div>
+    </article>
+
+    <article class="card" data-cat="cake">
+      <div class="image fit-cover" style="background-image:url('StrawberryCheesecake.jpg');"></div>
+      <div class="content">
+        <div class="price-row">
+          <h3 style="margin:0">Strawberry Cheesecake</h3>
+          <span class="price">MMK 13000</span>
+        </div>
+        <button class="btn-add" data-id="cake2" data-name="Strawberry Cheesecake" data-price="13000" data-currency="MMK">Add</button>
+      </div>
+    </article>
+    </div>
+  </div>
+<br>
+  <!-- DRINKS -->
+  <div class="container" id="drinks">
+    <div class="section-title">
+      <h2>Drinks</h2>
+    </div><br>
+    <div class="grid drinks-grid">
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('americano.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Americano</h3><span class="price">MMK 6000</span></div>
+    <button class="btn-add" data-id="coffee1" data-name="Americano" data-price="6000" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('espressosingle.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Espresso(Single)</h3><span class="price">MMK 5500</span></div>
+    <button class="btn-add" data-id="coffee2" data-name="Espresso (Single)" data-price="5500" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('espressodouble.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Espresso(Double)</h3><span class="price">MMK 7000</span></div>
+    <button class="btn-add" data-id="coffee3" data-name="Espresso (Double)" data-price="7000" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('cappuccino.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Cappuccino</h3><span class="price">MMK 8000</span></div>
+    <button class="btn-add" data-id="coffee4" data-name="Cappuccino" data-price="8000" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('latte.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Latte</h3><span class="price">MMK 8500</span></div>
+    <button class="btn-add" data-id="coffee5" data-name="Latte" data-price="8500" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('mocha.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Mocha</h3><span class="price">MMK 9500</span></div>
+    <button class="btn-add" data-id="coffee6" data-name="Mocha" data-price="9500" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('flatWhite.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Flat White</h3><span class="price">MMK 8500</span></div>
+    <button class="btn-add" data-id="coffee7" data-name="Flat White" data-price="8500" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('macchiato.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Macchiato</h3><span class="price">MMK 7000</span></div>
+    <button class="btn-add" data-id="coffee8" data-name="Macchiato" data-price="7000" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('cortado.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Cortado</h3><span class="price">MMK 7500</span></div>
+    <button class="btn-add" data-id="coffee9" data-name="Cortado" data-price="7500" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('icedCoffee.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Iced Coffee</h3><span class="price">MMK 7000</span></div>
+    <button class="btn-add" data-id="coffee10" data-name="Iced Coffee" data-price="7000" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('icedlatte.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Iced Latte</h3><span class="price">MMK 9000</span></div>
+    <button class="btn-add" data-id="coffee11" data-name="Iced Latte" data-price="9000" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<article class="card" data-cat="coffee">
+  <div class="image fit-cover" style="background-image:url('coldBrew.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Cold Brew</h3><span class="price">MMK 10000</span></div>
+    <button class="btn-add" data-id="coffee12" data-name="Cold Brew" data-price="10000" data-currency="MMK">Add</button>
+  </div>
+</article>
+
+<!-- Teas & Other Beverages -->
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('EnglishBreakfastTea.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">English Tea</h3><span class="price">MMK 6000</span></div>
+    <button class="btn-add" data-id="tea1" data-name="English Breakfast Tea" data-price="6000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('EarlGReyTea.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Earl Grey Tea</h3><span class="price">MMK 6000</span></div>
+    <button class="btn-add" data-id="tea2" data-name="Earl Grey Tea" data-price="6000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('GreenTea.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Green Tea</h3><span class="price">MMK 6500</span></div>
+    <button class="btn-add" data-id="tea3" data-name="Green Tea" data-price="6500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('JasmineTea.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Jasmine Tea</h3><span class="price">MMK 6500</span></div>
+    <button class="btn-add" data-id="tea4" data-name="Jasmine Tea" data-price="6500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('ChamomileTea.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Chamomile Tea</h3><span class="price">MMK 7000</span></div>
+    <button class="btn-add" data-id="tea5" data-name="Chamomile Tea" data-price="7000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('PeppermintTea.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Peppermint Tea</h3><span class="price">MMK 7000</span></div>
+    <button class="btn-add" data-id="tea6" data-name="Peppermint Tea" data-price="7000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('MachaLAtte.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Matcha Latte</h3><span class="price">MMK 10000</span></div>
+    <button class="btn-add" data-id="tea7" data-name="Matcha Latte" data-price="10000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('ChaiLatte.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Chai Latte</h3><span class="price">MMK 9500</span></div>
+    <button class="btn-add" data-id="tea8" data-name="Chai Latte" data-price="9500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('HotChocolate.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Hot Chocolate</h3><span class="price">MMK 9000</span></div>
+    <button class="btn-add" data-id="tea9" data-name="Hot Chocolate" data-price="9000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('FreshLemonade.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Fresh Lemonade</h3><span class="price">MMK 6500</span></div>
+    <button class="btn-add" data-id="tea10" data-name="Fresh Lemonade" data-price="6500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('IcedTeaLemon.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Iced Tea(Lemon)</h3><span class="price">MMK 7500</span></div>
+    <button class="btn-add" data-id="tea11" data-name="Iced Tea (Lemon)" data-price="7500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="tea">
+  <div class="image fit-cover" style="background-image:url('FruitSmoothiesBanana.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Banana Smoothie</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="tea12" data-name="Fruit Smoothie" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+    </div>
+  </div>
+<br>
+  <!-- DESSERTS -->
+  <div class="container" id="desserts">
+    <div class="section-title"><h2>Desserts</h2></div><br>
+    <div class="grid">
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('Tiramisu.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Tiramisu</h3><span class="price">MMK 12000</span></div>
+    <button class="btn-add" data-id="dessert1" data-name="Tiramisu" data-price="12000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('Brownie.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Brownie</h3><span class="price">MMK 9000</span></div>
+    <button class="btn-add" data-id="dessert2" data-name="Brownie" data-price="9000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('Macarons.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Macarons</h3><span class="price">MMK 9500</span></div>
+    <button class="btn-add" data-id="dessert3" data-name="Macarons" data-price="9500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('PannaCotta.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Panna Cotta</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="dessert4" data-name="Panna Cotta" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('IceCreamChocolate.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Ice Cream </h3><span class="price">MMK 8500</span></div>
+    <button class="btn-add" data-id="dessert5" data-name="Ice Cream (3 scoops)" data-price="8500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('ChocolateMousse.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Mousse</h3><span class="price">MMK 9500</span></div>
+    <button class="btn-add" data-id="dessert6" data-name="Chocolate Mousse" data-price="9500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('FruitTart.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Tart</h3><span class="price">MMK 10000</span></div>
+    <button class="btn-add" data-id="dessert7" data-name="Fruit Tart" data-price="10000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('Exlair.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Éclair</h3><span class="price">MMK 9000</span></div>
+    <button class="btn-add" data-id="dessert8" data-name="Éclair" data-price="9000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('Profiteroles.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Profiteroles</h3><span class="price">MMK 10500</span></div>
+    <button class="btn-add" data-id="dessert9" data-name="Profiteroles" data-price="10500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('ChurroswithChocolateDip.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Churros</h3><span class="price">MMK 10000</span></div>
+    <button class="btn-add" data-id="dessert10" data-name="Churros with Chocolate Dip" data-price="10000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('Waffle.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Waffles</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="dessert11" data-name="Waffles with Syrup" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="dessert">
+  <div class="image fit-cover" style="background-image:url('Crepe.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Crepes</h3><span class="price">MMK 11500</span></div>
+    <button class="btn-add" data-id="dessert12" data-name="Crepes (Nutella, Banana, Strawberry)" data-price="11500" data-currency="MMK">Add</button>
+  </div>
+</article>
+   </div>
+  </div>
+<br>
+  <!-- Pastries & Baked Goods -->
+    <div class="container" id="pastries">
+    <div class="section-title"><h2>Pastries & Baked Goods</h2></div><br>
+    <div class="grid">
+      <article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('ButterCroissaant.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Butter Croissant</h3><span class="price">MMK 7000</span></div>
+    <button class="btn-add" data-id="pastry1" data-name="Butter Croissant" data-price="7000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('AlmondCroissant.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Almond Croissant</h3><span class="price">MMK 8000</span></div>
+    <button class="btn-add" data-id="pastry2" data-name="Almond Croissant" data-price="8000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('ChocolateCroissant.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Chocolate Croissant</h3><span class="price">MMK 8000</span></div>
+    <button class="btn-add" data-id="pastry3" data-name="Chocolate Croissant" data-price="8000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('BlueberryMuffin.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Blueberry Muffin</h3><span class="price">MMK 7500</span></div>
+    <button class="btn-add" data-id="pastry4" data-name="Blueberry Muffin" data-price="7500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('ChocolateChipMuffin.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Chocolate Muffin</h3><span class="price">MMK 7500</span></div>
+    <button class="btn-add" data-id="pastry5" data-name="Chocolate Chip Muffin" data-price="7500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('CinnamonRoll.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Cinnamon Roll</h3><span class="price">MMK 8500</span></div>
+    <button class="btn-add" data-id="pastry6" data-name="Cinnamon Roll" data-price="8500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('BananaBread.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Banana Bread</h3><span class="price">MMK 8500</span></div>
+    <button class="btn-add" data-id="pastry7" data-name="Banana Bread" data-price="8500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('SconeWithJam&Cream.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Scone</h3><span class="price">MMK 9000</span></div>
+    <button class="btn-add" data-id="pastry8" data-name="Scone with Jam & Cream" data-price="9000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('DanishPastry.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Danish</h3><span class="price">MMK 8000</span></div>
+    <button class="btn-add" data-id="pastry9" data-name="Danish Pastry" data-price="8000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('BagelWithCreamCheese.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Bagel</h3><span class="price">MMK 7000</span></div>
+    <button class="btn-add" data-id="pastry10" data-name="Bagel with Cream Cheese" data-price="7000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('BriocheBun.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Brioche</h3><span class="price">MMK 6500</span></div>
+    <button class="btn-add" data-id="pastry11" data-name="Brioche Bun" data-price="6500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="pastry">
+  <div class="image fit-cover" style="background-image:url('DonutsChocolate.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Donut</h3><span class="price">MMK 6000</span></div>
+    <button class="btn-add" data-id="pastry12" data-name="Donut" data-price="6000" data-currency="MMK">Add</button>
+  </div>
+</article>
+    </div>
+    </div>
+
+<br>
+  <!-- CAKE -->
+  <div class="container" id="cakes">
+    <div class="section-title"><h2>Cakes</h2></div><br>
+    <div class="grid">
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('ClassicCheesecake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Cheesecake</h3><span class="price">MMK 12000</span></div>
+    <button class="btn-add" data-id="cake1" data-name="Classic Cheesecake" data-price="12000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('StrawberryCheesecake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Strawberry Cheesecake</h3><span class="price">MMK 13000</span></div>
+    <button class="btn-add" data-id="cake2" data-name="Strawberry Cheesecake" data-price="13000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('BlueberryCheesecake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Blueberry Cheesecake</h3><span class="price">MMK 13000</span></div>
+    <button class="btn-add" data-id="cake3" data-name="Blueberry Cheesecake" data-price="13000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('ChocolateCake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Chocolate Cake</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="cake4" data-name="Chocolate Cake" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('RedVelvetCake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">RedVelvet Cake</h3><span class="price">MMK 12000</span></div>
+    <button class="btn-add" data-id="cake5" data-name="Red Velvet Cake" data-price="12000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('CarrotCake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Carrot Cake</h3><span class="price">MMK 11500</span></div>
+    <button class="btn-add" data-id="cake6" data-name="Carrot Cake" data-price="11500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('OperaCake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Opera Cake</h3><span class="price">MMK 14000</span></div>
+    <button class="btn-add" data-id="cake7" data-name="Opera Cake" data-price="14000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('BlackForestCake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">BlackForest Cake</h3><span class="price">MMK 12500</span></div>
+    <button class="btn-add" data-id="cake8" data-name="Black Forest Cake" data-price="12500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('CoffeeWalnutCake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">CoffeeWalnut Cake</h3><span class="price">MMK 12000</span></div>
+    <button class="btn-add" data-id="cake9" data-name="Coffee Walnut Cake" data-price="12000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('LemonDrizzleCake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Drizzle Cake</h3><span class="price">MMK 11500</span></div>
+    <button class="btn-add" data-id="cake10" data-name="Lemon Drizzle Cake" data-price="11500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('MatchaCake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Matcha Cake</h3><span class="price">MMK 13500</span></div>
+    <button class="btn-add" data-id="cake11" data-name="Matcha Cake" data-price="13500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="cake">
+  <div class="image fit-cover" style="background-image:url('MangoMousseCake.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Mousse Cake</h3><span class="price">MMK 14000</span></div>
+    <button class="btn-add" data-id="cake12" data-name="Mango Mousse Cake" data-price="14000" data-currency="MMK">Add</button>
+  </div>
+</article>
+    </div>
+  </div>
+<br>
+   <!--  Light Meals & Snacks -->
+    <div class="container" id="meals">
+    <div class="section-title"><h2>Light Meals & Snacks</h2></div><br>
+    <div class="grid">
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('ChickenSandwich.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Chicken Sandwich</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="meal1" data-name="Chicken Sandwich" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('TunaSandwich.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Tuna Sandwich</h3><span class="price">MMK 10500</span></div>
+    <button class="btn-add" data-id="meal2" data-name="Tuna Sandwich" data-price="10500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('VeggieSandwich.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Veggie Sandwich</h3><span class="price">MMK 10000</span></div>
+    <button class="btn-add" data-id="meal3" data-name="Veggie Sandwich" data-price="10000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('Ham&CheeseSandwich.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Ham & Cheese Sandwich</h3><span class="price">MMK 11500</span></div>
+    <button class="btn-add" data-id="meal4" data-name="Ham & Cheese Sandwich" data-price="11500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('TurkeyClubSandwich.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Turkey Sandwich</h3><span class="price">MMK 12000</span></div>
+    <button class="btn-add" data-id="meal5" data-name="Turkey Club Sandwich" data-price="12000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('BLTSandwich.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">BLT Sandwich</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="meal6" data-name="BLT Sandwich" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('GrilledCheeseSandwich.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Cheese Sandwich</h3><span class="price">MMK 9500</span></div>
+    <button class="btn-add" data-id="meal7" data-name="Grilled Cheese Sandwich" data-price="9500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('PaniniChickenPesto.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Panini </h3><span class="price">MMK 12500</span></div>
+    <button class="btn-add" data-id="meal8" data-name="Panini (Chicken Pesto)" data-price="12500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('PaniniViggie.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Panini(Veggie)</h3><span class="price">MMK 11500</span></div>
+    <button class="btn-add" data-id="meal9" data-name="Panini (Veggie)" data-price="11500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('QuicheLorraine.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Quiche Lorraine</h3><span class="price">MMK 13000</span></div>
+    <button class="btn-add" data-id="meal10" data-name="Quiche Lorraine" data-price="13000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('AvocadoToast.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Avocado Toast</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="meal11" data-name="Avocado Toast" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="meal">
+  <div class="image fit-cover" style="background-image:url('CaesarSalad.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Caesar Salad</h3><span class="price">MMK 12000</span></div>
+    <button class="btn-add" data-id="meal12" data-name="Caesar Salad" data-price="12000" data-currency="MMK">Add</button>
+  </div>
+</article>
+    </div>
+  </div>   
+<br>
+<!-- Specials & Seasonal -->
+  <div class="container" id="specials">
+    <div class="section-title"><h2>Specials & Seasonal</h2></div><br>
+    <div class="grid">
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('PumpkinSpiceLatteSeasonal.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Pumpkin Latte</h3><span class="price">MMK 12000</span></div>
+    <button class="btn-add" data-id="special1" data-name="Pumpkin Spice Latte" data-price="12000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('PeppermintMochaSeasonal.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Peppermint Mocha</h3><span class="price">MMK 12000</span></div>
+    <button class="btn-add" data-id="special2" data-name="Peppermint Mocha" data-price="12000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('EggnogLatteWinter.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Eggnog Latte</h3><span class="price">MMK 12500</span></div>
+    <button class="btn-add" data-id="special3" data-name="Eggnog Latte" data-price="12500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('SummerBerryIcedTea.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Berry Iced Tea</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="special4" data-name="Summer Berry Iced Tea" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('TropicalSmoothieBowl.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Tropical Bowl</h3><span class="price">MMK 13500</span></div>
+    <button class="btn-add" data-id="special5" data-name="Tropical Smoothie Bowl" data-price="13500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('FrozenCaramelFrappe.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Frozen Caramel Frappe</h3><span class="price">MMK 12500</span></div>
+    <button class="btn-add" data-id="special6" data-name="Frozen Caramel Frappe" data-price="12500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('IcedMatchaLemonade.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Matcha Lemonade</h3><span class="price">MMK 11500</span></div>
+    <button class="btn-add" data-id="special7" data-name="Iced Matcha Lemonade" data-price="11500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('HoneyLavenderLatte.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Honey Latte</h3><span class="price">MMK 12500</span></div>
+    <button class="btn-add" data-id="special8" data-name="Honey Lavender Latte" data-price="12500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('RoseMilkTea.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Rose Tea</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="special9" data-name="Rose Milk Tea" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('CoconutIcedCoffee.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Coconut Coffee</h3><span class="price">MMK 12000</span></div>
+    <button class="btn-add" data-id="special10" data-name="Coconut Iced Coffee" data-price="12000" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('SaltedCaramelColdBrew.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Salted Brew</h3><span class="price">MMK 12500</span></div>
+    <button class="btn-add" data-id="special11" data-name="Salted Caramel Cold Brew" data-price="12500" data-currency="MMK">Add</button>
+  </div>
+</article>
+<article class="card" data-cat="special">
+  <div class="image fit-cover" style="background-image:url('SpicedAppleCider.jpg');"></div>
+  <div class="content">
+    <div class="price-row"><h3 style="margin:0">Apple Cider</h3><span class="price">MMK 11000</span></div>
+    <button class="btn-add" data-id="special12" data-name="Spiced Apple Cider" data-price="11000" data-currency="MMK">Add</button>
+  </div>
+</article>
+    </div>
+  </div>
+
+  <!-- Floating Cart Sidebar -->
+  <div id="cartSidebar" class="cart-sidebar">
+    <h2>Your Cart <span id="closeCart">&times;</span></h2>
+    <div id="cartContent"></div>
+    <h3>Total: MMK<span id="totalPrice">0</span></h3>
+    <button id="checkoutBtn">Checkout</button>
+  </div>
+
+  <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="foot-col">
+          <p>We roast small batches, brew with love, and keep the vibes vintage.</p>
+          <div class="foot-social">
+            <a href="#" class="social-btn">f</a>
+            <a href="#" class="social-btn">⌾</a>
+            <a href="#" class="social-btn">x</a>
+          </div>
+        </div>
+
+        <div class="foot-col">
+          <h4>Navigation</h4>
+          <a href="/homepage/homepage.html">Home</a>
+          <a href="/About Us/88.html">About Us</a>
+          <a href="/menu/Menu.html">Menu</a>
+          <a href="/contact/contact.html">Contact</a><br>
+          <a href="/job/job_op.html">Jobs</a>
+        </div>
+
+        <div class="foot-col">
+          <h4>Open Hours</h4>
+          <p>7:00 AM – 7:00 PM</p>
+          <p>Mon – Sat</p>
+          <p>Closed on Public Holidays</p>
+          <p>We're always looking for passionate people to join our coffee shop family.</p>
+        </div>
+      </div>
+      <div class="copy">© 2025 The Quiet Mug. All rights reserved.</div>
+    </footer>
+
+  <script src="script.js" defer></script>
+  <script>
+    const authBtn = document.getElementById("authBtn");
+
+    function updateAuthButton() {
+      const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+      if (isLoggedIn) {
+        authBtn.textContent = "Logout";
+        authBtn.onclick = () => {
+          localStorage.setItem("loggedIn", "false");
+          sessionStorage.removeItem("currentUser"); // optional: clear user data
+          location.reload();
+        };
+      } else {
+        authBtn.textContent = "Log In";
+        authBtn.onclick = () => {
+          window.location.href = "/newreglogin/loginpage.html";
+        };
+      }
+    }
+
+    updateAuthButton();
+  </script>
+</body>
+</html>

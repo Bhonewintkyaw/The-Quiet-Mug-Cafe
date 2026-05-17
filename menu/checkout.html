@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Checkout – The Quiet Mug</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center fixed;
+      background-size: cover;
+    font-family: 'Montserrat', Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .checkout-wrapper {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .checkout-form {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(167, 110, 62, 0.13);
+    padding: 36px 28px 28px 28px;
+    flex: 1 1 400px;
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 480px;
+  }
+
+  h2 {
+    font-family: "Playfair Display", serif;
+    color: #a76e3e;
+    margin-bottom: 18px;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+
+  label {
+    font-weight: 500;
+    color: #5a3a2e;
+    margin-bottom: 4px;
+    display: block;
+    letter-spacing: 0.5px;
+  }
+
+  input[type="text"], input[type="tel"], textarea, select {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #e9e4d4;
+    background: #fff8f1;
+    font-size: 1.07em;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    border-color: #d4a373;
+    box-shadow: 0 0 0 2px #f5e6d6;
+    outline: none;
+  }
+
+  textarea { resize: vertical; min-height: 38px; max-height: 120px; }
+
+  .form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form-actions button[type="reset"] {
+    padding: 6px 14px;
+    font-size: 0.95em;
+    border-radius: 8px;
+    min-width: 70px;
+    background: linear-gradient(135deg, #e9e4d4, #d4a373);
+    color: #a76e3e;
+    font-weight: 500;
+    border: none;
+    box-shadow: 0 1px 4px rgba(167, 110, 62, 0.10);
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+  }
+
+  .form-actions button[type="reset"]:hover {
+    background: linear-gradient(135deg, #d4a373, #b07d62);
+    color: #fff;
+    transform: scale(1.04);
+  }
+
+  .btn-checkout {
+    margin-top: 0 !important;
+    width: auto;
+    padding: 12px 28px;
+    font-size: 1.08em;
+    border-radius: 12px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #d4a373 60%, #b07d62 100%);
+    color: #fff;
+    border: none;
+    font-weight: bold;
+    box-shadow: 0 4px 16px rgba(167, 110, 62, 0.14);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+  }
+
+  .btn-checkout:hover {
+    background: linear-gradient(135deg, #b07d62 60%, #a76e3e 100%);
+    transform: scale(1.03);
+    box-shadow: 0 6px 24px rgba(167, 110, 62, 0.18);
+  }
+
+  @media (max-width: 900px) {
+    .checkout-wrapper { flex-direction: column; gap: 0; }
+    .checkout-form { margin-bottom: 18px; }
+  }
+
+  .back-menu-btn {
+  position: fixed;
+  top: 12px;
+  left: 16px;
+  background: linear-gradient(135deg, #d4a373, #b07d62);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.98em;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(167, 110, 62, 0.12);
+  z-index: 2000;
+  transition: background 0.2s, transform 0.2s;
+}
+.back-menu-btn:hover {
+  background: linear-gradient(135deg, #b07d62, #a76e3e);
+  transform: scale(1.04);
+}
+</style>
+</head>
+<body>
+
+<!-- Add Back to Menu button in upper left corner -->
+<a href="Menu.html" class="back-menu-btn">← Back to Menu</a>
+
+<div class="checkout-wrapper">
+
+  <!-- Customer & Payment Form -->
+  <div class="checkout-form">
+    <h2>Checkout – The Quiet Mug</h2>
+    <form id="checkoutForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <label for="address">Delivery Address</label>
+      <textarea id="address" name="address" required></textarea>
+
+      <label for="note">Delivery Note</label>
+      <textarea id="note" name="note" placeholder="Any instructions for delivery"></textarea>
+
+      <label for="payment">Payment Method</label>
+      <select id="payment" name="payment" required>
+        <option value="">Select a payment method</option>
+        <option value="kbzpay">KBZPay</option>
+        <option value="wavepay">WavePay</option>
+      </select>
+
+      <!-- Always show amount to pay -->
+      <label for="payAmount">Amount to Pay</label>
+      <input type="text" id="payAmount" name="payAmount" readonly>
+
+      <div class="form-actions">
+        <button type="reset">Reset</button>
+        <button type="submit" class="btn-checkout">Confirm & Pay</button>
+      </div>
+    </form>
+  </div>
+
+</div>
+
+<script>
+  let cart = JSON.parse(localStorage.getItem('checkout_cart')) || {
+    "Espresso": {price: 3000, quantity: 1},
+    "Cappuccino": {price: 4500, quantity: 1},
+    "Cheesecake": {price: 5000, quantity: 1}
+  };
+
+  // Calculate total
+  let total = 0;
+  Object.values(cart).forEach(item => {
+    total += item.price * item.quantity;
+  });
+  localStorage.setItem('checkout_total', total);
+
+  // Set amount to pay on page load
+  document.getElementById('payAmount').value = localStorage.getItem('checkout_total') ? `MMK${localStorage.getItem('checkout_total')}` : '';
+
+  // --- Extra form validation ---
+  function validateCheckoutForm(form) {
+    const namePattern = /^[A-Za-z\s]{2,}$/;
+    const phonePattern = /^\d{8,11}$/;
+
+    if (!namePattern.test(form.name.value.trim())) {
+      alert("Please enter a valid full name (letters and spaces only).");
+      return false;
+    }
+
+    if (!phonePattern.test(form.phone.value.trim())) {
+      alert("Please enter a valid phone number with digits only (8–11 digits).");
+      return false;
+    }
+
+    if (!form.address.value.trim()) {
+      alert("Please enter a delivery address.");
+      return false;
+    }
+
+    if (!form.payment.value) {
+      alert("Please select a payment method.");
+      return false;
+    }
+
+    return true;
+  }
+
+  document.getElementById('checkoutForm').onsubmit = function(e) {
+    e.preventDefault();
+    if (!validateCheckoutForm(this)) return;
+
+    const name = this.name.value.trim();
+    const phone = this.phone.value.trim();
+    const address = this.address.value.trim();
+    const note = this.note.value.trim();
+    const payment = this.payment.value;
+    const totalAmount = localStorage.getItem('checkout_total');
+    const cart = localStorage.getItem('checkout_cart'); // get cart
+
+    // Save order info
+    localStorage.setItem('order_name', name);
+    localStorage.setItem('order_phone', phone);
+    localStorage.setItem('order_address', address);
+    localStorage.setItem('order_note', note);
+    localStorage.setItem('order_payment', payment);
+    localStorage.setItem('order_total', totalAmount);
+    localStorage.setItem('order_cart', cart); // save cart for confirmation
+
+    // Clear cart and redirect
+    localStorage.removeItem('cart');
+    localStorage.removeItem('checkout_cart');
+    localStorage.removeItem('checkout_total');
+    window.location.href = "order-confirmation.html";
+  };
+
+  document.getElementById('checkoutForm').addEventListener('reset', function() {
+  setTimeout(() => {
+    document.getElementById('payAmount').value = localStorage.getItem('checkout_total') ? `MMK${localStorage.getItem('checkout_total')}` : '';
+  }, 0);
+});
+</script>
+
+
+</body>
+</html>

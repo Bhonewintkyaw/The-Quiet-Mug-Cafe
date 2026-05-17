@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cafe Site - Register</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: url('https://images.unsplash.com/photo-1509042239860-f550ce710b93') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(139, 69, 19, 0.9);
+      color: white;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+      box-shadow: 0px 3px 6px rgba(0,0,0,0.3);
+      transition: background 0.3s;
+    }
+    .back-btn:hover {
+      background: rgba(111, 52, 16, 0.9);
+    }
+
+    .register-box {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 30px 40px;
+      border-radius: 16px;
+      width: 320px;
+      text-align: center;
+      box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
+    }
+    .register-box h2 {
+      margin-bottom: 20px;
+      color: #fff;
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .register-box input {
+      width: 92%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 15px;
+    }
+    .register-box input:focus {
+      border: 2px solid #8B4513;
+    }
+    .register-box button {
+      width: 100%;
+      padding: 12px;
+      background: #8B4513;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .register-box button:hover {
+      background: #6f3410;
+    }
+    .register-box p {
+      margin-top: 15px;
+      font-size: 14px;
+      color: #fff;
+    }
+    .register-box a {
+      color: #ffdd99;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .register-box a:hover {
+      text-decoration: underline;
+    }
+    .created, .error {
+        width: 100%;
+        height: 40px;
+        border-radius: 8px;
+        margin-top: 25px;
+        line-height: 40px;
+        color: white;
+        font-weight: bold;
+    }
+    .created { background-color: green; }
+    .error { background-color: red; }
+  </style>
+</head>
+<body>
+  <a href="/homepage/homepage.html" class="back-btn">← Back to Homepage</a>
+
+  <div class="register-box">
+    <h2>Register</h2>
+    <form id="registerForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+      <button type="submit" class="signupbtn">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="loginpage.html">Login</a></p>
+    <div class="message_box"></div>
+  </div>
+
+  <script>
+    // Initialize users array in localStorage if it doesn't exist
+    if (!localStorage.getItem('users')) {
+      localStorage.setItem('users', JSON.stringify([]));
+    }
+
+    const form = document.getElementById("registerForm");
+    const message = document.querySelector(".message_box");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirmPassword").value;
+
+      // Validation
+      if (password !== confirmPassword) {
+        showMessage("Passwords do not match!", "error");
+        return;
+      }
+
+      if (password.length < 6) {
+        showMessage("Password must be at least 6 characters!", "error");
+        return;
+      }
+
+      // Get existing users
+      const users = JSON.parse(localStorage.getItem('users'));
+      
+      // Check if username or email already exists
+      const userExists = users.some(user => 
+        user.username === username || user.email === email
+      );
+
+      if (userExists) {
+        showMessage("Username or email already exists!", "error");
+        return;
+      }
+
+      // Create new user object
+      const newUser = {
+        username,
+        email,
+        password, // Note: In a real application, you should hash passwords
+        createdAt: new Date().toISOString()
+      };
+
+      // Add new user to the array
+      users.push(newUser);
+      
+      // Save updated users array to localStorage
+      localStorage.setItem('users', JSON.stringify(users));
+      
+      // Store current user in session
+      sessionStorage.setItem('currentUser', JSON.stringify(newUser));
+      
+      showMessage("Account successfully created!", "created");
+
+      // Redirect after a short delay
+      setTimeout(() => {
+        window.location.href = "../menu/menu.html";
+      }, 1500);
+    });
+
+    function showMessage(text, type) {
+      message.textContent = text;
+      message.className = type;
+    }
+  </script>
+</body>
+</html>

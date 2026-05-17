@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Quite Mug Café</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+  <nav class="navbar">
+    <!-- Logo on the left -->
+    <img src="/photos/logo-removebg-preview.png" alt="Logo" class="logo">
+
+    <!-- Navigation in the middle -->
+    <ul class="nav-links">
+      <li><a href="/homepage/homepage.html">Home</a></li>
+      <li><a href="/menu/Menu.html">Menu</a></li>
+      <li><a href="/About Us/88.html">About</a></li>
+      <li><a href="/contact/contact.html">Contact Us</a></li>
+      <li><a href="/job/job_op.html">Jobs</a></li>
+    </ul>
+    
+    <!-- Login button on the right -->
+    <button id="authBtn" class="login-btn">Log In</button>
+  </nav>
+  
+
+    <div class="container">
+        <br><br><br><br>
+        <header>
+            <div class="logo">Quite Mug Café</div>
+            <p class="tagline">Crafting the perfect cup since 2010</p>
+        </header>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Email Us</h3>
+                        <p>Send us a message directly:</p>
+                        <a href="mailto:info@quitemugcafe.com?subject=Inquiry from Website&body=Hello Quite Mug Café," class="email-link">
+                            info@quitemugcafe.com
+                        </a>
+                        <p class="note">Clicking this will open your email app with our address pre-filled</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Instagram</h3>
+                        <p>Follow us and send a DM:</p>
+                        <a href="https://www.instagram.com/thecafemug5?igsh=MW83dm42bGhhMjljbQ==" target="_blank" class="social-link">
+                            <i class="fab fa-instagram"></i> @THECAFEMUG5
+                        </a>
+                        <p class="note">Click to view our Instagram profile</p>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Call Us</h3>
+                        <p>+95 685 776 038</p>
+                        <small>Mon-Sat, 7AM-7PM</small>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="info-text">
+                        <h3>Visit Us</h3>
+                        <p>Parami Road, Yangon</p>
+                        <small>Near Parami Vally and MICT Park</small>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h2>Send a Message</h2>
+                
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                       
+                        <select id="subject" name="subject">
+    <option value="" disabled selected hidden>Select a subject</option>
+    <option value="general">General Inquiry</option>
+    <option value="catering">Catering Services</option>
+    <option value="feedback">Feedback</option>
+    <option value="other">Other</option>
+</select>
+
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-full">Send Message</button>
+                </form>
+            </div>
+        </div>
+            
+        <!-- Add this section where you want the map to appear -->
+<section class="map-section">
+    <h2>Location</h2>
+    <div class="map-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.256990316962!2d96.17234197508135!3d16.87825298396267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c1935c8e67c7c9%3A0x3f3567a5c84e790!2sUniversity%20of%20Information%20Technology%20(UIT)!5e0!3m2!1sen!2smm!4v1689876543210!5m2!1sen!2smm" 
+            width="100%" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="University of Information Technology Location">
+        </iframe>
+    </div>
+    <div class="location-info">
+        <p><i class="fas fa-map-marker-alt"></i> University of Information Technology, Yangon</p>
+    </div>
+</section>
+
+
+    <div class="container">
+        <!-- Newsletter Section -->
+        <section class="subscription">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get updates on new coffee flavors, special events, and exclusive promotions delivered to your inbox.</p>
+            <form class="subscribe-form" id="subscribeForm">
+                <input type="email" id="subscriberEmail" placeholder="Enter your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Email Help Section -->
+        <section class="email-help">
+            <h2>Email Not Working?</h2>
+            <p>If clicking the email link doesn't work, you can:</p>
+            <ol>
+                <li>Copy our email address: <span id="emailAddress">info@quitemugcafe.com</span> 
+                    <button class="copy-btn" id="copyButton">Copy</button>
+                </li>
+                <li>Open your email app manually</li>
+                <li>Paste our address and send your message</li>
+            </ol>
+        </section>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="foot-col">
+          <p>We roast small batches, brew with love, and keep the vibes vintage.</p>
+          <div class="foot-social">
+            <a href="#" class="social-btn">f</a>
+            <a href="#" class="social-btn">⌾</a>
+            <a href="#" class="social-btn">x</a>
+          </div>
+        </div>
+
+        <div class="foot-col">
+          <h4>Navigation</h4>
+          <a href="/homepage/homepage.html">Home</a>
+          <a href="/About Us/88.html">About Us</a>
+          <a href="/menu/Menu.html">Menu</a>
+          <a href="/contact/contact.html">Contact</a><br>
+          <a href="/job/job_op.html">Jobs</a>
+        </div>
+
+        <div class="foot-col">
+          <h4>Open Hours</h4>
+          <p>7:00 AM – 7:00 PM</p>
+          <p>Mon – Sat</p>
+          <p>Closed on Public Holidays</p>
+          <p>We're always looking for passionate people to join our coffee shop family.</p>
+        </div>
+      </div>
+      <div class="copy">© 2025 The Quiet Mug. All rights reserved.</div>
+    </footer>
+
+    <script src="contact.js"></script>
+    <script>
+    const authBtn = document.getElementById("authBtn");
+
+    function updateAuthButton() {
+      const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+      if (isLoggedIn) {
+        authBtn.textContent = "Logout";
+        authBtn.onclick = () => {
+          localStorage.setItem("loggedIn", "false");
+          sessionStorage.removeItem("currentUser"); // optional: clear user data
+          location.reload();
+        };
+      } else {
+        authBtn.textContent = "Log In";
+        authBtn.onclick = () => {
+          window.location.href = "/newreglogin/loginpage.html";
+        };
+      }
+    }
+
+    updateAuthButton();
+  </script>
+</body>
+</html>
