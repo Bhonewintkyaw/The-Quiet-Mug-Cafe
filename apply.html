@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Job Opportunities - Coffee</title>
-<style>
-    body {
-        margin: 0;
-        font-family: "Georgia", serif;
-        background-color: #fdf6f0;
-        color: #4b3832;
-    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apply Form</title>
+  <style>
+  body {
+    background-color: #fdf6f0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+  }
 
-    /* ===== NAVIGATION BAR ===== */
-    .navbar {
+  /* ===== NAVIGATION BAR ===== */
+  .navbar {
   position:fixed;
   top: 20px;
   left: 50%;
@@ -111,48 +110,55 @@
   transform: scale(1.05);
 }
 
-    /* ===== JOB SECTION ===== */
-    .job-section {
-        padding: 100px 20px 60px;
-        text-align: center;
-    }
-    .job-section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 15px;
-        color: #3e2723;
-    }
-    .job-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 20px;
-        max-width: 1100px;
-        margin: auto;
-    }
-    .job-card {
-        background: #fffaf5;
-        border-radius: 15px;
-        padding: 20px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: 0.3s;
-    }
-    .job-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-    .apply-btn {
-        display: inline-block;
-        padding: 10px 20px;
-        background: #a0522d;
-        color: #fff;
-        border-radius: 25px;
-        text-decoration: none;
-        font-weight: 500;
-        transition: background 0.3s ease;
-    }
-    .apply-btn:hover {
-        background: #7b3f24;
-    }
-    /* ===== Footer ===== */
+  /* ===== FORM STYLES ===== */
+  .apply-form-section {
+    max-width: 600px;
+    margin: 120px auto 3rem; /* margin-top adjusted to avoid overlap with navbar */
+    padding: 2rem;
+    background: #fff7f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .apply-form-section h2 {
+    text-align: center;
+    color: #4e342e;
+    margin-bottom: 1.5rem;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #3e2723;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  .form-group input[readonly] {
+    background-color: #f5f5f5;
+    cursor: not-allowed;
+  }
+  .apply-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: #8d6e63;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  .apply-btn:hover {
+    background: #6d4c41;
+  }
+  /* ===== Footer ===== */
 .site-footer{background:var(--cream);padding:30px 20px 16px;margin-top:20px;border-top:2px solid rgba(75,58,42,.2)}
 .footer-grid{
   display:grid;gap:26px;grid-template-columns:2fr 1fr 1fr 1fr;
@@ -176,55 +182,54 @@
 
     <!-- Navigation in the middle -->
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="menu/Menu.html">Menu</a></li>
-      <li><a href="About Us/88.html">About</a></li>
-      <li><a href="contact/contact.html">Contact Us</a></li>
-      <li><a href="job/job_op.html">Jobs</a></li>
-    </ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Menu.html">Menu</a></li>
+        <li><a href="88.html">About</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="job_op.html">Jobs</a></li>
+      </ul>
     
     <!-- Login button on the right -->
     <button id="authBtn" class="login-btn">Log In</button>
   </nav>
 
-<section class="job-section">
-    <h2>Join Our Coffee Family ☕</h2>
-    <p>We're always looking for passionate, friendly, and coffee-loving individuals to join our team.</p>
-
-    <div class="job-cards">
-        <div class="job-card">
-            <h3>Barista 👩🏻‍🦰☕️</h3>
-            <p>Craft beautiful coffee drinks and create memorable customer moments.</p>
-            <a href="apply.html?position=Barista" class="apply-btn">Apply Now</a>
-        </div>
-        <div class="job-card">
-            <h3>Cashier 💸</h3>
-            <p>Be the friendly face that welcomes every customer with a smile.</p>
-            <a href="apply.html?position=Cashier" class="apply-btn">Apply Now</a>
-        </div>
-        <div class="job-card">
-            <h3>Baker 👩🏻‍🍳🧁</h3>
-            <p>Bake delicious pastries and desserts that pair with our brews.</p>
-            <a href="apply.html?position=Baker" class="apply-btn">Apply Now</a>
-        </div>
-        <div class="job-card">
-            <h3>Shift Supervisor 👨‍💼</h3>
-            <p>Lead the team and keep operations running smoothly.</p>
-            <a href="apply.html?position=Shift Supervisor" class="apply-btn">Apply Now</a>
-        </div>
-        <div class="job-card">
-            <h3>Delivery Rider 🚚</h3>
-            <p>Deliver fresh coffee and smiles right to customers’ doors.</p>
-            <a href="apply.html?position=Delivery Rider" class="apply-btn">Apply Now</a>
-        </div>
-        <div class="job-card">
-            <h3>Cleaning Staff 🧹</h3>
-            <p>Ensure a clean and cozy environment for guests.</p>
-            <a href="apply.html?position=Cleaning Staff" class="apply-btn">Apply Now</a>
-        </div>
+<section class="apply-form-section">
+  <h2>Apply for a Position</h2>
+  <form class="apply-form" action="submit_application.php" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" placeholder="Your name" required>
     </div>
-    <br>
-    <!-- Footer -->
+
+    <div class="form-group">
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="+95 9 123 456 789" required>
+    </div>
+
+    <div class="form-group">
+      <label for="position">Position Applying For *</label>
+      <input type="text" id="position" name="position" readonly>
+    </div>
+
+    <div class="form-group">
+      <label for="experience">Work Experience</label>
+      <textarea id="experience" name="experience" placeholder="Briefly describe your relevant experience"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="resume">Upload Resume (PDF/DOCX)</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx">
+    </div>
+
+    <button type="submit" class="apply-btn">Submit Application</button>
+  </form>
+</section>
+  <!-- Footer -->
     <footer class="site-footer">
       <div class="footer-grid">
         <div class="foot-col">
@@ -239,10 +244,10 @@
         <div class="foot-col">
           <h4>Navigation</h4>
           <a href="index.html">Home</a>
-          <a href="About Us/88.html">About Us</a>
-          <a href="menu/Menu.html">Menu</a>
-          <a href="contact/contact.html">Contact</a><br>
-          <a href="job/job_op.html">Jobs</a>
+          <a href="88.html">About Us</a>
+          <a href="Menu.html">Menu</a>
+          <a href="contact.html">Contact</a><br>
+          <a href="job_op.html">Jobs</a>
         </div>
 
         <div class="foot-col">
@@ -255,8 +260,17 @@
       </div>
       <div class="copy">© 2025 The Quiet Mug. All rights reserved.</div>
     </footer>
-</section>
-</body>
+
+<script>
+  // Get position from URL and insert into input
+  const params = new URLSearchParams(window.location.search);
+  const position = params.get("position");
+  document.getElementById("position").value = position ? position : "Not specified";
+
+  document.querySelector(".apply-form").addEventListener("submit", function(e) {
+    alert("Thank you for applying! We'll get back to you soon.");
+  });
+</script>
 <script>
     const authBtn = document.getElementById("authBtn");
 
@@ -280,4 +294,5 @@
 
     updateAuthButton();
   </script>
+</body>
 </html>
